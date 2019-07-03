@@ -1,0 +1,52 @@
+INSTRUCTIONS:
+
+1. Fork a repository (first time only).
+
+2. Update the fork: 
+create a pull-request from the original repo to YOUR OWN.
+Follow "Syncing your fork to the original repository via the browser" github article.
+Accept your own pull request!
+
+---------------Then open a terminal---------------
+
+FIRST TIME ONLY:
+3. enter your working folder:
+cd C/Users/.../Coding
+4. clone your fork to your computer: 
+git clone https://github.com/GiovanniCanarecci/kuka.git
+5. enter the kuka folder:
+cd ./kuka
+
+OTHER TIMES:
+3. enter your working folder:
+cd C/Users/.../Coding/kuka
+4-5. get your folder updates:
+git pull
+
+To check if you have something to commit:   git status
+To create a file:   touch newfile.extension
+To open a file:   start newfile.extension
+
+6. Branch to work on a subject:
+git branch provide_basics
+
+To check available branches:   git branch
+To delete (locally) the branch: git branch -d provide_basics
+
+7. Move between branches:
+git checkout provide_basics
+
+[time to do the actual work!]
+
+8. To commit your changes [from the branch to a newly-created branch on github]
+git add . (add all) 
+git commit -m 'Explanatory text'
+git push -u origin provide_basics
+
+To merge branch to master (while in branch):   git merge master
+
+---------------From the webpage---------------
+
+9. click on: new pull request. Select the proper folders. Make a pull request. Approve it.
+
+10. From your master branch create a new pull request to the original repo kuka.

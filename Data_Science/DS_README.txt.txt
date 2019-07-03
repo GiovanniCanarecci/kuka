@@ -1,0 +1,1 @@
+Tasks: research about SQL tables
