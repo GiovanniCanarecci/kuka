@@ -1,0 +1,46 @@
+CREATE A VIRTUAL ENVIRONMENT  (first time only)
+
+Check to have pip:   py -m pip
+
+1. enter your working folder:
+cd C/Users/UTENTE/Documents/Coding/kuka/backend
+
+2. install a package:
+py -m pip install virtualenv
+
+3. Create the virtual environment:
+py -m venv BEVirtEnv
+
+4. Activate the virtual environment:
+source BEVirtEnv/Scripts/activate
+
+5. Create the requirements file:
+touch requirements.txt
+
+6. Install the packages we want in the virtual environment:
+py -m pip install flask
+py -m pip install ...
+
+7. Output installed packages in requirements format:
+pip freeze >> requirements.txt
+
+To show the requirements:   cat requirements.txt
+Also create a file .gitignore with inside simply "BEVirtEnv"
+
+8. Deactivate the virtual environment:
+deactivate
+
+-----------------------------------------------
+
+USE A VIRTUAL ENVIRONMENT
+
+1. enter your working folder:
+cd C/Users/UTENTE/Documents/Coding/kuka/backend
+
+2. Activate the virtual environment:
+source BEVirtEnv/Scripts/activate
+
+WORK ON IT
+
+3. Deactivate the virtual environment:
+deactivate
