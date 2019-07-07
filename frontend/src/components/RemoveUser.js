@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { UserContext } from "../context/user-context";
 import { ADD_USER } from "../reducers/types";
 
-const AddUser = () => {
+const RemoveUser = () => {
   const [username, setUsername] = useState("");
   const { dispatch } = useContext(UserContext);
 
@@ -19,7 +19,7 @@ const AddUser = () => {
 
   return (
     <div class='dboard'>
-    <h1> Add a user: </h1>
+    <h1> Remove a user: </h1>
     <form onSubmit={submitUser}>
       <div >
         <input
@@ -29,20 +29,13 @@ const AddUser = () => {
           onChange={e => setUsername(e.target.value)}
           placeholder="Username"
         />
-        <input
-          type="text"
-          className="col-md-10 col-sm-12"
-          value={username}
-          onChange={e => setUsername(e.target.value)}
-          placeholder="Password"
-        />
         <br />
         <button
           type="submit"
           className="btn btn-primary col-md-2 col-sm-12"
           disabled={username.trim().length === 0}
         >
-          Add User
+          Remove
         </button>
       </div>
     </form>
@@ -51,4 +44,4 @@ const AddUser = () => {
   );
 };
 
-export default AddUser;
+export default RemoveUser;

@@ -1,6 +1,7 @@
 import React from "react";
 import AddUser from "./AddUser";
 import UserList from "./UserList";
+import RemoveUser from "./RemoveUser"
 
 const Dashboard = () => {
   return (
@@ -9,6 +10,8 @@ const Dashboard = () => {
         <AddUser />
       </div>
       <UserList />
+      <br />
+      <RemoveUser />
     </div>
   );
 };
