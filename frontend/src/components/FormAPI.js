@@ -5,14 +5,17 @@ import { FormikCustomInputComponent } from "./FormikCustomInputComponent";
 export function FormApi(props) {
   const { fields, callback } = props;
 
+  // Create an object holding initial values in the form Formik needs them
   const initialValues = fields.reduce(function(accumulator, currentValue) {
     const fieldname = currentValue.name;
     accumulator[fieldname] = currentValue.initial;
     return accumulator;
   }, {});
 
+  // Create a new array consisting of only those feelds that are required
   const requiredFields = fields.filter(field => field.required === true);
 
+  // Build an array of Field elements in the form Formik wants them
   const fieldsJsx = fields.map((field, index) => (
     <div className="form-group" key={index}>
       <Field
@@ -24,6 +27,7 @@ export function FormApi(props) {
       />
     </div>
   ));
+  
   return (
     <Formik
       initialValues={initialValues}
