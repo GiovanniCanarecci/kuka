@@ -24,7 +24,6 @@ export function FormApi(props) {
       />
     </div>
   ));
-  console.log(initialValues);
   return (
     <Formik
       initialValues={initialValues}
