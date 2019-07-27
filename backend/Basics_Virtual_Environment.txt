@@ -13,6 +13,7 @@ py -m venv BEVirtEnv
 
 4. Activate the virtual environment:
 source BEVirtEnv/Scripts/activate
+(In windows) BEVirtEnv/Scripts/activate
 
 5. Create the requirements file:
 touch requirements.txt
@@ -22,7 +23,7 @@ py -m pip install flask
 py -m pip install ...
 
 7. Output installed packages in requirements format:
-pip freeze >> requirements.txt
+pip freeze > requirements.txt
 
 To show the requirements:   cat requirements.txt
 Also create a file .gitignore with inside simply "BEVirtEnv"
