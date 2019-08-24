@@ -18,8 +18,10 @@ const AddUser = () => {
   };
 
   return (
+    <div class='dboard'>
+    <h1> Add a user: </h1>
     <form onSubmit={submitUser}>
-      <div className="form-group row">
+      <div >
         <input
           type="text"
           className="col-md-10 col-sm-12"
@@ -27,7 +29,14 @@ const AddUser = () => {
           onChange={e => setUsername(e.target.value)}
           placeholder="Username"
         />
-
+        <input
+          type="text"
+          className="col-md-10 col-sm-12"
+          value={username}
+          onChange={e => setUsername(e.target.value)}
+          placeholder="Password"
+        />
+        <br />
         <button
           type="submit"
           className="btn btn-primary col-md-2 col-sm-12"
@@ -37,6 +46,8 @@ const AddUser = () => {
         </button>
       </div>
     </form>
+    </div>
+
   );
 };
 
